@@ -1,3 +1,9 @@
+let quizQuestion = document.getElementById("question")
+let answerOne = document.getElementById("a1")
+let answerTwo = document.getElementById("a2")
+let answerThree = document.getElementById("a3")
+let answerFour = document.getElementById("a4")
+    
 const questionOne = {
     question: "Commonly used data types DO NOT include:",
     answerone: "strings",
@@ -31,4 +37,10 @@ const questionTwo = {
     answerone: "javascript",
     answertwo: "terminal/bash",
     answerthree: "for loops",
-    answerfour: "console log", }                   
+    answerfour: "console log", }      
+    
+
+
+    function countRight(){
+
+}
