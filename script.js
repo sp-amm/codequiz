@@ -1,18 +1,16 @@
 var startBtn = document.getElementById("start")
 let quizQuestion = document.getElementById("question")
-let answerOne = document.getElementById("a1")
-let answerTwo = document.getElementById("a2")
-let answerThree = document.getElementById("a3")
-let answerFour = document.getElementById("a4")
+let answerOne = document.getElementById("btn1")
+let answerTwo = document.getElementById("btn2")
+let answerThree = document.getElementById("btn3")
+let answerFour = document.getElementById("btn4")
 let quList = document.getElementById("qulist")
+let questionTitle = document.getElementById("title")
 
     
-const starter = {
-    question: "Welcome to the javascript quiz. Press start and good luck.",
-    answerone: "Start",
-}
 
 const questionOne = {
+    title: "Question 1",
     question: "Commonly used data types DO NOT include:",
     answerone: "strings",
     answertwo: "booleans",
@@ -21,6 +19,7 @@ const questionOne = {
 }
 
 const questionTwo = {
+    title: "Question 2",
     question: "The condition with an if/else statement is enclosed within _____",
     answerone: "quotes",
     answertwo: "curly brackets",
@@ -29,6 +28,7 @@ const questionTwo = {
 }    
 
 const questionThree = {
+    title: "Question 3",
     question: "Arrays in javascript can be used to store:",
     answerone: "numbers and strings",
     answertwo: "other arrays",
@@ -37,6 +37,7 @@ const questionThree = {
 }            
 
 const questionFour = {
+    title: "Question 4",
     question: "String values must be closed within _______ when being assigned to variables.",
     answerone: "commas",
     answertwo: "curly brackets",
@@ -45,6 +46,7 @@ const questionFour = {
 }                
 
 const questionFive = {
+    title: "Question 5",
     question: "A very useful tool used during development and debugging for printing content ",
     answerone: "javascript",
     answertwo: "terminal/bash",
@@ -52,19 +54,27 @@ const questionFive = {
     answerfour: "console log", 
 }      
    
-startBtn.addEventListener('click', function(){
-    console.log("start");
+
+    startBtn.addEventListener('click', startQuiz);
+
+    function startQuiz(){
         startBtn.classList.add('hide');
         quList.classList.remove('hide');
-    });  
-   
-//function startHide()
-    
-   
-        
+        nextQuestion();
+    };  
+      
+    function nextQuestion(){
+        showNextQuestion();
+    };
 
-    //function nextQuestion(){
-
+    function showNextQuestion(){
+        questionTitle.innerText = questionOne['title'];
+        quizQuestion.innerText = questionOne['question'];
+        answerOne.innerText = questionOne['answerone'];
+        answerTwo.innerText = questionOne['answertwo'];
+        answerThree.innerText = questionOne['answerthree'];
+        answerFour.innerText = questionOne['answerfour'];
+    };
    // }
 
   //  function chooseAnswer(){
