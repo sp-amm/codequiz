@@ -7,6 +7,8 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!--Local CSS-->
+    <link rel="stylesheet" href="style.css">
 
     <title>Coding Quiz Challenge</title>
   </head>
@@ -22,7 +24,10 @@
               <h2 class="center-card-title" id="title">CODING QUIZ CHALLENGE</h2>
               <p class="card-text" id="question">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
             </div>
-            <ul class="list-group list-group-flush">
+
+            <div id="start"><button type="button" class="btn btn-primary btn-lg btn-block">START</button></div>
+            
+            <ul class="list-group list-group-flush hide" id="qulist">
               
               <li class="list-group-item" id="a1"><button type="button" class="btn btn-primary btn-lg btn-block" id="btn1">"ansonetext"</button></li>
               
@@ -36,6 +41,7 @@
             
         </div>
     </div>
+
     
     <!--Attempted Sticky footer-->
     <!--<footer class="footer mt-auto py-3">
@@ -45,6 +51,7 @@
     </footer>-->
     
     <!-- Optional JavaScript -->
+    <script src="script.js"></script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
