@@ -13,7 +13,7 @@ const questionOne = {
     title: ["Question 1", "Question 2", "Question 3", "Question 4", "Question 5",],
     question: ["Commonly used data types DO NOT include:", "The condition with an if/else statement is enclosed within _____", "Arrays in javascript can be used to store:", "String values must be closed within _______ when being assigned to variables.", "A very useful tool used during development and debugging for printing content ",],
     answerone: ["strings","quotes", "numbers and strings", "commas", "javascript",],
-    answertwo: ["booleans", "curly brackets", "other arrays", "terminal/bash",],
+    answertwo: ["booleans", "curly brackets", "other arrays", "terminal/bash", "visual studio code"],
     answerthree: ["alerts", "parentheses", "booleans", "quotes", "for loops",],
     answerfour: ["numbers", "square brackets", "all of the above", "parentheses", "console log",]
 }
@@ -52,16 +52,24 @@ const questionOne = {
         questionCount++
     };
 
+
+    
     function showNextQuestion(){
+
+            if (questionCount >= 5){
+            questionTitle.innerText = "CONGRATULATIONS"
+            quizQuestion.innerText = "You've finished the Quiz."
+            quList.classList.add('hide');
+            rightOrWrong.innerText = "You scored " + rightCount + "!";
+        }else{
+
         questionTitle.innerText = questionOne.title[questionCount];
         quizQuestion.innerText = questionOne.question[questionCount];
         answerOne.innerText = questionOne.answerone[questionCount];
         answerTwo.innerText = questionOne.answertwo[questionCount];
         answerThree.innerText = questionOne.answerthree[questionCount];
         answerFour.innerText = questionOne.answerfour[questionCount];
+    
     };
-
-    if (questionCount >= 5){
-        questionTitle.innerText = "CONGRATULATIONS"
-        quizQuestion.innerText = "You've finished the Quiz."
     }
+    
