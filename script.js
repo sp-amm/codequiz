@@ -15,8 +15,8 @@ const questionOne = {
     question: ["Commonly used data types DO NOT include:", "The condition with an if/else statement is enclosed within _____", "Arrays in javascript can be used to store:", "String values must be closed within _______ when being assigned to variables.", "A very useful tool used during development and debugging for printing content ",],
     answerone: ["strings","quotes", "numbers and strings", "commas", "javascript",],
     answertwo: ["booleans", "curly brackets", "other arrays", "terminal/bash", "visual studio code"],
-    answerthree: ["alerts" === true, "parentheses" ===true, "booleans", "quotes" === true, "for loops",],
-    answerfour: ["numbers", "square brackets", "all of the above" === true, "parentheses", "console log" ===true,]
+    answerthree: ["alerts", "parentheses", "booleans", "quotes", "for loops",],
+    answerfour: ["numbers", "square brackets", "all of the above", "parentheses", "console log",]
 }
 
     //Start button click to begin quiz
@@ -58,12 +58,17 @@ const questionOne = {
     answerThree.addEventListener('click', rightWrong);
     answerFour.addEventListener('click', rightWrong);
     
+    function findRightButton(event){
+        var whichBtn = event.target;
+        console.log(whichBtn.innerText);
+    } 
     //Setting variable for correct answers
     var rightCount = 0
+
     
     //RIght answer count, and delay on execution of next question function to display right/wrong answer text.
     function rightWrong(){
-        if (this.innerText === true){
+        if (1 === questionOne.answerthree[1]){
         rightCount++;
         rightOrWrong.innerText = "Right Answer"
         setTimeout(()=> nextQuestion(),1000);    
