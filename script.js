@@ -43,16 +43,18 @@ const questionOne = {
     answerThree.addEventListener('click', rightWrong);
     answerFour.addEventListener('click', rightWrong);
     
-    let rightPick;
-    let whichBtn;
+    let rightPick = "";
+ 
     
     //Getting the value of the button that is clicked to see if it's right
     function findRightButton(event){
-        whichBtn = event.target;
-        console.log(whichBtn.innerText);
-        rightPick = whichBtn.innerText;
-        console.log(rightPick);
-        return rightPick;   
+        rightPick = event.target.innerText;
+        //console.log(whichBtn.innerText);
+        //rightPick = whichBtn.innerText;
+        //console.log(rightPick);
+        //console.log(rightPick) ;
+        return rightPick;
+          
     }
       
     console.log(rightPick);  
@@ -69,7 +71,7 @@ const questionOne = {
     
     //RIght answer count, and delay on execution of next question function to display right/wrong answer text.
     function rightWrong(rightPick){
-        if (rightPick == 1){
+        if (findRightButton(event) == "alerts"){
         rightCount++;
         rightOrWrong.innerText = "Right Answer"
         setTimeout(()=> nextQuestion(),1000);    
@@ -90,12 +92,13 @@ const questionOne = {
     
     function showNextQuestion(){
 
-            if (questionCount >= 5){
-            questionTitle.innerText = "CONGRATS"
-            quizQuestion.innerText = "You've finished the Quiz."
-            quList.classList.add('hide');
-            rightOrWrong.innerText = "You scored " + rightCount + "!";
-        }else{
+        if (questionCount >= 5){
+        questionTitle.innerText = "CONGRATS"
+        quizQuestion.innerText = "You've finished the Quiz."
+        quList.classList.add('hide');
+        rightOrWrong.innerText = "You scored " + rightCount + "!";
+        }
+        else{
         rightOrWrong.innerText = "";
         questionTitle.innerText = questionOne.title[questionCount];
         quizQuestion.innerText = questionOne.question[questionCount];
